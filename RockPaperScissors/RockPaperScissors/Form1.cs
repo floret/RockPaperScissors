@@ -16,5 +16,22 @@ namespace RockPaperScissors
         {
             InitializeComponent();
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            comboBox1.SelectedIndex++;//selects next item.
+        }
     }
 }
+//comboBox1.SelectedIndex++;//selects next item.
+//comboBox1.SelectedIndex(0);//rock 1 paper 2 scissors.
