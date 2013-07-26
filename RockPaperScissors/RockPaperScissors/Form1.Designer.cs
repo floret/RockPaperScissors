@@ -1,6 +1,6 @@
 ﻿namespace RockPaperScissors
 {
-    partial class Form1
+    partial class frmRPS
     {
         /// <summary>
         /// Required designer variable.
@@ -28,141 +28,81 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.cmbPlayerOne = new System.Windows.Forms.ComboBox();
+            this.cmbPlayerTwo = new System.Windows.Forms.ComboBox();
+            this.btnGo = new System.Windows.Forms.Button();
+            this.lvwDisplay = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
-            // listBox1
+            // cmbPlayerOne
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(119, 96);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(621, 433);
-            this.listBox1.TabIndex = 0;
+            this.cmbPlayerOne.FormattingEnabled = true;
+            this.cmbPlayerOne.Items.AddRange(new object[] {
+            "Rock",
+            "Paper",
+            "Scissors"});
+            this.cmbPlayerOne.Location = new System.Drawing.Point(42, 29);
+            this.cmbPlayerOne.Name = "cmbPlayerOne";
+            this.cmbPlayerOne.Size = new System.Drawing.Size(121, 21);
+            this.cmbPlayerOne.TabIndex = 0;
+            this.cmbPlayerOne.SelectedIndexChanged += new System.EventHandler(this.cmbPlayerOne_SelectedIndexChanged);
             // 
-            // comboBox1
+            // cmbPlayerTwo
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "rock",
-            "paper",
-            "scissors"});
-            this.comboBox1.Location = new System.Drawing.Point(12, 44);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 1;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.cmbPlayerTwo.FormattingEnabled = true;
+            this.cmbPlayerTwo.Items.AddRange(new object[] {
+            "Rock",
+            "Paper",
+            "Scissors"});
+            this.cmbPlayerTwo.Location = new System.Drawing.Point(188, 29);
+            this.cmbPlayerTwo.Name = "cmbPlayerTwo";
+            this.cmbPlayerTwo.Size = new System.Drawing.Size(121, 21);
+            this.cmbPlayerTwo.TabIndex = 1;
+            this.cmbPlayerTwo.SelectedIndexChanged += new System.EventHandler(this.cmbPlayerTwo_SelectedIndexChanged);
             // 
-            // comboBox2
+            // btnGo
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "rock",
-            "paper",
-            "scissors"});
-            this.comboBox2.Location = new System.Drawing.Point(139, 44);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 2;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.btnGo.Location = new System.Drawing.Point(140, 296);
+            this.btnGo.Name = "btnGo";
+            this.btnGo.Size = new System.Drawing.Size(75, 23);
+            this.btnGo.TabIndex = 3;
+            this.btnGo.Text = "Go!";
+            this.btnGo.UseVisualStyleBackColor = true;
+            this.btnGo.Click += new System.EventHandler(this.btnGo_Click);
             // 
-            // comboBox3
+            // lvwDisplay
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "rock",
-            "paper",
-            "scissors"});
-            this.comboBox3.Location = new System.Drawing.Point(266, 44);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
-            this.comboBox3.TabIndex = 3;
-            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            this.lvwDisplay.Location = new System.Drawing.Point(42, 67);
+            this.lvwDisplay.Name = "lvwDisplay";
+            this.lvwDisplay.Size = new System.Drawing.Size(267, 202);
+            this.lvwDisplay.TabIndex = 4;
+            this.lvwDisplay.UseCompatibleStateImageBehavior = false;
+            this.lvwDisplay.View = System.Windows.Forms.View.List;
             // 
-            // comboBox4
-            // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
-            "rock",
-            "paper",
-            "scissors"});
-            this.comboBox4.Location = new System.Drawing.Point(413, 44);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 21);
-            this.comboBox4.TabIndex = 4;
-            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
-            "rock",
-            "paper",
-            "scissors"});
-            this.comboBox5.Location = new System.Drawing.Point(540, 44);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(121, 21);
-            this.comboBox5.TabIndex = 5;
-            this.comboBox5.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
-            // 
-            // comboBox6
-            // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Items.AddRange(new object[] {
-            "rock",
-            "paper",
-            "scissors"});
-            this.comboBox6.Location = new System.Drawing.Point(667, 44);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(121, 21);
-            this.comboBox6.TabIndex = 6;
-            this.comboBox6.SelectedIndexChanged += new System.EventHandler(this.comboBox6_SelectedIndexChanged);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(816, 44);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // Form1
+            // frmRPS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(928, 553);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox6);
-            this.Controls.Add(this.comboBox5);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.listBox1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(353, 331);
+            this.Controls.Add(this.lvwDisplay);
+            this.Controls.Add(this.btnGo);
+            this.Controls.Add(this.cmbPlayerTwo);
+            this.Controls.Add(this.cmbPlayerOne);
+            this.Name = "frmRPS";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Rock     |     Paper     |     Scissors";
+            this.Load += new System.EventHandler(this.frmRPS_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox cmbPlayerOne;
+        private System.Windows.Forms.ComboBox cmbPlayerTwo;
+        private System.Windows.Forms.Button btnGo;
+        private System.Windows.Forms.ListView lvwDisplay;
+
     }
 }
 
